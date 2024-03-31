@@ -8,6 +8,13 @@ router.get('/', (_req, res) => {
   res.send(diagnosisService.getAllDiagnosis());
 });
 
+router.get('/:code', (req,res) =>{
+  const diagnosis = diagnosisService.getDiagnosisByCode(req.params.code);
+  if(diagnosis)
+    res.send(diagnosis);
+  res.status(404).end();
+});
+
 router.post('/', (req, res) => {
   try{
     const newDiagnosis = req.body as Diagnosis;
