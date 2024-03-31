@@ -6,6 +6,10 @@ const getAllDiagnosis = ():Diagnosis[] => {
     return diagnosis;
 };
 
+const addDiagnosis = (entry: Diagnosis): void => {
+    diagnosis.push(entry);
+};
+
 export default {
-    getAllDiagnosis
+    getAllDiagnosis, addDiagnosis
 };
