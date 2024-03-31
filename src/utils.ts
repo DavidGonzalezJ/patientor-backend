@@ -74,7 +74,7 @@ const parseDischarge = (object:unknown): Discharge => {
 };
 
 const isSickLeave = (param: object): param is SickLeave => {
-  return 'startDdate' in param && isString(param.startDdate) && 'endDate' in param && isString(param.endDate);
+  return 'startDate' in param && isString(param.startDate) && 'endDate' in param && isString(param.endDate);
 };
 
 const parseSickLeave = (object:unknown): SickLeave => {
